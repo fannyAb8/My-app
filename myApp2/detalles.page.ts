@@ -9,7 +9,8 @@ export class FormularioLoginPages implements OnInit {
 
   mostrar_texto= false;
 
-  password="1234"
+  passwordbad=""
+  passwordOK="1234"
   validar= [];
 
 
@@ -20,11 +21,19 @@ export class FormularioLoginPages implements OnInit {
 
   Validar(){
     this.validar.push({
-      password: this.password,
+      passwordbad: this.passwordbad,
     });
-    this.password="1234";
+    this.passwordbad="";
 
-    this.mostrar_texto= true;
+    this.mostrar_texto= false;
+    console.log("Validar");
+
+    this.validar.push({
+      passwordOK: this.passwordOK,
+    });
+    this.passwordOK="1234";
+
+    this.mostar_texto= true;
     console.log("Validar");
   }
 }

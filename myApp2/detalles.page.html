@@ -14,11 +14,19 @@
       </div>
       <div class="col-auto">
         <label for="inputPassword2" class="visually-hidden">Password</label>
-        <input type="password" class="form-control" id="inputPassword2" name="pass" placeholder="Password">
+        <input type="password" class="form-control" id="inputPassword2" name="pass"[([(ngModel)]="Password")] placeholder="Password">
       </div>
       <div class="col-auto">
         <button type="submit" class="btn btn-primary mb-3" (click)="validar()">Confirm identity</button>
+        <div class="alert alert-sucess" role="alert" *ngIf="passwordbad"></div>
+        Esa no es, ya ví porque repruebas las materias
+        </div>
+        <div class="alert alert-sucess" role="alert" *ngIf=passwordOK">
+          A pero usas photomath
+        </div>
+      </span>
       </div>
+    </div>
     </form>
 
   </ion-toolbar>
